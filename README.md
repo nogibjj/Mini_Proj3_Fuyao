@@ -1,3 +1,8 @@
+[![Install](https://github.com/nogibjj/Mini_Proj3_Fuyao/actions/workflows/format.yml/badge.svg)](https://github.com/nogibjj/Mini_Proj3_Fuyao/actions/workflows/format.yml)
+[![Lint](https://github.com/nogibjj/Mini_Proj3_Fuyao/actions/workflows/lint.yml/badge.svg)](https://github.com/nogibjj/Mini_Proj3_Fuyao/actions/workflows/lint.yml)
+[![Format](https://github.com/nogibjj/Mini_Proj3_Fuyao/actions/workflows/format.yml/badge.svg)](https://github.com/nogibjj/Mini_Proj3_Fuyao/actions/workflows/format.yml)
+[![Test](https://github.com/nogibjj/Mini_Proj3_Fuyao/actions/workflows/test.yml/badge.svg)](https://github.com/nogibjj/Mini_Proj3_Fuyao/actions/workflows/test.yml)
+
 # Mini Project 3
 
 ### Author name: Fuyao Li
