@@ -1,13 +1,7 @@
-from main import g_describe, data_manage, general_viz_combined, save_to_md
+from main import data_manage, general_viz_combined, save_to_md
 
 
 dataset = "https://raw.githubusercontent.com/fivethirtyeight/data/master/births/US_births_1994-2003_CDC_NCHS.csv"
-
-
-def test_g_describe():
-    describe = g_describe(dataset)
-    # print(describe)
-    assert describe.shape == (8, 2)
 
 
 def test_data_manage():
@@ -17,8 +11,7 @@ def test_data_manage():
 
 
 def test_general_viz_combined():
-    df = g_describe(dataset)
-    general_viz_combined(df)
+    general_viz_combined(dataset)
 
 
 def test_save_to_md():
@@ -26,7 +19,6 @@ def test_save_to_md():
 
 
 if __name__ == "__main__":
-    test_g_describe()
     test_data_manage()
     test_general_viz_combined()
     test_save_to_md()

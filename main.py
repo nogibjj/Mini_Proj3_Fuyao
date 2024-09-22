@@ -8,11 +8,6 @@ from mylib.lib import (
 )
 
 
-def g_describe(dataset):
-    g = load_dataset(dataset)
-    return g.describe()
-
-
 def data_manage(dataset):
     """custom describe"""
     df = load_dataset(dataset)
@@ -28,8 +23,9 @@ def data_manage(dataset):
     return stats_df
 
 
-def general_viz_combined(df):
+def general_viz_combined(dataset):
     """saves all the figures at once"""
+    df = load_dataset(dataset)
     create_bar(df)
     create_line(df)
 
@@ -38,7 +34,7 @@ def save_to_md(dataset):
     df = load_dataset(dataset)
     stats_df = data_manage(dataset)
 
-    general_viz_combined(df)
+    general_viz_combined(dataset)
 
     with open("result.md", "w", encoding="utf-8") as f:
         # Write the title

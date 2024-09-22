@@ -13,25 +13,26 @@ dataset = "https://raw.githubusercontent.com/fivethirtyeight/data/master/births/
 
 def test_load_dataset():
     df = load_dataset(dataset)
-    assert df.shape == (10, 2)
+    assert df.height == 10  # Check the number of rows
+    assert df.width == 2    # Check the number of columns
 
 
 def test_grab_mean():
     df_year = load_dataset(dataset)
     mean = grab_mean(df_year)
-    assert mean == df_year.describe().iloc[1, 1]
+    assert round(mean, 1) == 3972213.7
 
 
 def test_grab_median():
     df_year = load_dataset(dataset)
     median = grab_median(df_year)
-    assert median == df_year.describe().iloc[5, 1]
+    assert round(median, 1) == 3956092.0
 
 
 def test_grab_std():
     df_year = load_dataset(dataset)
     std = grab_std(df_year)
-    assert std == df_year.describe().iloc[2, 1]
+    assert round(std, 2) == 73265.11
 
 
 def test_create_bar():

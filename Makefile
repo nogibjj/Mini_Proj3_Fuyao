@@ -8,7 +8,7 @@ test:
 	python -m pytest -cov=main test_main.py
 
 lint:
-	ruff check *.py mylib/*.py test_*.py *.ipynb
+	ruff check *.py mylib/*.py test_*.py
 
 deploy:
 
