@@ -31,7 +31,6 @@ def general_viz_combined(dataset):
 
 
 def save_to_md(dataset):
-    df = load_dataset(dataset)
     stats_df = data_manage(dataset)
 
     general_viz_combined(dataset)
