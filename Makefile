@@ -19,7 +19,7 @@ generate_and_push:
 		git config --local user.email "action@github.com"; \
 		git config --local user.name "GitHub Action"; \
 		git add .; \
-		git commit -m "Modify Makefile to pass"; \
+		git commit -m "Upload files"; \
 		git push; \
 	else \
 		echo "No changes to commit. Skipping commit and push."; \

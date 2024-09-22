@@ -1,15 +1,9 @@
-[![Install](https://github.com/nogibjj/Individual_Proj_Fuyao/actions/workflows/format.yml/badge.svg)](https://github.com/nogibjj/Individual_Proj_Fuyao/actions/workflows/format.yml)
-[![Lint](https://github.com/nogibjj/Individual_Proj_Fuyao/actions/workflows/lint.yml/badge.svg)](https://github.com/nogibjj/Individual_Proj_Fuyao/actions/workflows/lint.yml)
-[![Format](https://github.com/nogibjj/Individual_Proj_Fuyao/actions/workflows/format.yml/badge.svg)](https://github.com/nogibjj/Individual_Proj_Fuyao/actions/workflows/format.yml)
-[![Test](https://github.com/nogibjj/Individual_Proj_Fuyao/actions/workflows/test.yml/badge.svg)](https://github.com/nogibjj/Individual_Proj_Fuyao/actions/workflows/test.yml)
-
-# Individual Project 1
+# Mini Project 3
 
 ### Author name: Fuyao Li
 
 ## Overview
-This project analyzes the total number of births in the United States for each year from 1994 to 2003. The dataset used for this analysis is sourced from the [FiveThirtyEight dataset](https://raw.githubusercontent.com/fivethirtyeight/data/master/births/US_births_1994-2003_CDC_NCHS.csv)
- dataset, which contains detailed information on daily births during this period.
+This project analyzes the total number of births in the United States for each year from 1994 to 2003. The dataset used for this analysis is sourced from the [FiveThirtyEight dataset](https://raw.githubusercontent.com/fivethirtyeight/data/master/births/US_births_1994-2003_CDC_NCHS.csv) dataset, which contains detailed information on daily births during this period. This project uses `Polars` package for descriptive statistics
 
 
 ## Set up

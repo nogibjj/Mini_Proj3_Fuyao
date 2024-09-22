@@ -2,14 +2,14 @@
     library file
 """
 
-import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import polars as pl
 
 
 def load_dataset(dataset):
-    df = pd.read_csv(dataset)
-    df_year = df.groupby('year')['births'].sum().reset_index()
+    df = pl.read_csv(dataset)
+    df_year = df.groupby('year').agg(pl.col('births').sum())
     return df_year
 
 
@@ -34,8 +34,15 @@ def grab_std(df_year):
 def create_bar(df_year, jupy=False):
     """Create a bar plot to visualize yearly total births"""
 
+    # Sort the Polars DataFrame by 'year'
+    df_year_sorted = df_year.sort('year')
+
+    # Extract the columns as numpy arrays for plotting
+    years = df_year_sorted['year'].to_numpy()
+    births = df_year_sorted['births'].to_numpy()
+
     plt.figure(figsize=(10, 6))
-    sns.barplot(x=df_year['year'], y=df_year['births'], color='skyblue')
+    sns.barplot(x=years, y=births, color='skyblue')
     plt.title('Total Births Per Year (1994-2003)')
     plt.xlabel('Year')
     plt.ylabel('Total Births')
@@ -48,8 +55,15 @@ def create_bar(df_year, jupy=False):
 def create_line(df_year, jupy=False):
     """create line plot of yearly births"""
 
+    # Sort the Polars DataFrame by 'year'
+    df_year_sorted = df_year.sort('year')
+
+    # Extract the columns as numpy arrays for plotting
+    years = df_year_sorted['year'].to_numpy()
+    births = df_year_sorted['births'].to_numpy()
+
     plt.figure(figsize=(10, 6))
-    plt.plot(df_year['year'], df_year['births'], marker='o', color='green')
+    plt.plot(years, births, marker='o', color='green')
     plt.title('Total Births per Year (1994-2003)')
     plt.xlabel('Year')
     plt.ylabel('Number of Births')

@@ -12,7 +12,7 @@ seaborn==0.13.2
 nbval==0.10.0 
 jupyter == 1.0.0
 openpyxl
-
+polars==0.18.4
 #web
 fastapi==0.85.0
 uvicorn==0.18.3
